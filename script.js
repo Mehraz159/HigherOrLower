@@ -16,7 +16,7 @@ const highScoreDisplay = document.getElementById("highScore")
 
 
 function getRandomNumber() {
-    return Math.floor(Math.random() * 10);
+    return Math.floor(Math.random() * 100);
 }
 
 function startGame() {
@@ -54,6 +54,7 @@ function checkGuess(isHigher) {
     displayCurrentNumber();
     newPoints = points + 1;
     displayPoints();
+
     if ((isHigher && nextNumber > currentNumber) || (!isHigher && nextNumber < currentNumber)) {
         currentNumber = nextNumber;
         displayCurrentNumber();
@@ -80,4 +81,3 @@ resetButton.addEventListener("click", resetGame);
 higherButton.addEventListener("click", () => checkGuess(true));
 lowerButton.addEventListener("click", () => checkGuess(false));
 
-resetGame();
