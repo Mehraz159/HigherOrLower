@@ -70,7 +70,6 @@ function checkGuess(isHigher) {
         displayCurrentNumber();
         isGameRunning = false;
         output.textContent = "Game Over! You guessed wrong.";
-        startButton.disabled = false;
         higherButton.disabled = true;
         lowerButton.disabled = true;
     }
